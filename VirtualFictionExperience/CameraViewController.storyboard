@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="v3c-uq-KDf">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Camera View Controller-->
+        <scene sceneID="5Hk-4Z-NEb">
+            <objects>
+                <viewController id="v3c-uq-KDf" customClass="CameraViewController" customModule="VirtualFictionExperience" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2cX-SO-yyA"/>
+                        <viewControllerLayoutGuide type="bottom" id="T8b-rl-99i"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UbF-ng-0tZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPE-m9-viN">
+                                <rect key="frame" x="238" y="518" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="- Menu">
+                                    <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="menuButtonTouchUpInside:" destination="v3c-uq-KDf" eventType="touchUpInside" id="9OC-fO-IVW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNM-2x-nD9">
+                                <rect key="frame" x="245" y="468" width="39" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="-Back">
+                                    <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonTouchUpInside:" destination="v3c-uq-KDf" eventType="touchUpInside" id="HTS-QY-ZxH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="T8b-rl-99i" firstAttribute="top" secondItem="FPE-m9-viN" secondAttribute="bottom" constant="20" id="5HN-MC-vaR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JNM-2x-nD9" secondAttribute="trailing" constant="20" id="AtI-3Y-VfY"/>
+                            <constraint firstItem="FPE-m9-viN" firstAttribute="top" secondItem="JNM-2x-nD9" secondAttribute="bottom" constant="20" id="Fpr-yl-B5H"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FPE-m9-viN" secondAttribute="trailing" constant="20" id="MKg-2I-oO2"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Gqc-vI-wld" appends="YES" id="U3t-9F-uge"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="JNM-2x-nD9" id="nOw-KM-SsV"/>
+                        <outlet property="menuButton" destination="FPE-m9-viN" id="sIN-wk-XCf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cet-zZ-pE5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Gqc-vI-wld">
+                    <connections>
+                        <action selector="tappedCameraView:" destination="v3c-uq-KDf" id="rki-em-wlz"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="244.26666666666665" y="206.37333333333333"/>
+        </scene>
+    </scenes>
+</document>
