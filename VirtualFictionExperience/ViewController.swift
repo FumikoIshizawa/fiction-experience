@@ -9,8 +9,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-//    let cameraViewController: CameraViewController!
-
     override func viewDidLoad() {
         super.viewDidLoad()
     }
